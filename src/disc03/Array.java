@@ -31,16 +31,36 @@ public class Array {
         return result;
     }
 
+    public static int[] flatten(int[][] x) {
+        int totalLength = 0;
+        for (int[] elemArr : x) {
+            totalLength += elemArr.length;
+        }
+
+        int[] a = new int[totalLength];
+        int aIndex = 0;
+
+        for (int[] elemArr : x) {
+            for (int elem : elemArr) {
+                a[aIndex] = elem;
+                aIndex++;
+            }
+        }
+        return a;
+    }
+
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4};
+//        int[] a = {1, 2, 3, 4};
 //        System.out.println(Arrays.toString(insert(a, 10, 0)));
 //        System.out.println(Arrays.toString(insert(a, 20, 100)));
 //        System.out.println(Arrays.toString(insert(a, 30, 4)));
 
 //        reverse(a);
 //        System.out.println(Arrays.toString(a));
-        System.out.println(Arrays.toString(replicate(a)));
+//        System.out.println(Arrays.toString(replicate(a)));
 
+        int[][] b = {{1, 2, 3}, {}, {7, 8}};
+        System.out.println(Arrays.toString(flatten(b)));
     }
 
 }
