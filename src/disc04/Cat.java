@@ -6,6 +6,11 @@ public class Cat extends Animal{
         this.noise = "Meow!";
     }
 
+    @Override
+    public void greet() {
+        System.out.println("Cat " + name + " says: " + makeNoise());
+    }
+
     public static void main(String[] args) {
         Cat catOld = new Cat("Kiddy", 10);
         catOld.greet();
