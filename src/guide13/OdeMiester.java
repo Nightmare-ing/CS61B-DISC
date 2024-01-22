@@ -1,7 +1,7 @@
 package guide13;
 
 public class OdeMiester {
-    public final int breath;
-    public final Grodie gosh;
-    public final Grodie[] arr;
+    public final int breath = 5;
+    public final Grodie gosh = null;
+    public final Grodie[] arr = null;
 }
